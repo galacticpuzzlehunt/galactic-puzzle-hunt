@@ -1,0 +1,2196 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"0be415eea6","agent":"","transactionName":"ZgBRN0JSV0VZBxEMW19KdRZeUE1fVwpKFUFLH18GQx1RU1QUABdHCwxdDVVB","applicationID":"51841001","errorBeacon":"bam.nr-data.net","applicationTime":463}</script>
+        <title>Galactic Puzzle Hunt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../static/images/airplaneFavicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700i|Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="../../static/Skeleton-2.0.4/css/normalize.css">
+        <link rel="stylesheet" href="../../static/Skeleton-2.0.4/css/skeleton.css">
+        <link rel="stylesheet" href="../../static/css/base.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script type="text/javascript" src="../../static/js/jquery.formset.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="top-bar-container">
+             <div class="nav-inner-container">
+                <nav class="main-nav">
+                    <a href='../../index.html'>Home</a>
+                    <a href='../../rules.html'>Rules</a>
+                    
+                        <a href='../../story.html'>Story</a>
+                    
+                    <a href='../../puzzles.html'>Puzzles</a>
+                    <a href='../../teams.html'>Teams</a>
+                    <a href='../../faq.html'>FAQ</a>
+                    
+                        <a href='../../errata.html'>Updates</a>
+                    
+                    <a href='../../wrapup.html'>Wrap-Up</a>
+                </nav>
+             </div>
+        </div>
+        <div class="center">
+            <div class="row">
+                <div class="six columns">
+                
+                </div>
+                <div class="login-controls-container">
+                
+                </div>
+            </div>
+            
+
+<h1 class="page-header">Stats: dʒʌmbəl</h1>
+
+<div class="single-narrower-column-on-desktop">
+    <div class="row puzzle-stats-panel">
+        <div class="six columns">
+            <div class="stat-entry">Total solves: <span class="stat-entry__value">122</span></div>
+        </div>
+        <div class="six columns">
+            <div class="stat-entry">Total guesses: <span class="stat-entry__value">152</span></div>
+        </div>
+    </div>
+
+    <table class="gph-list-table" style="table-layout: fixed;">
+        <col style="width: 5ch">
+        <col style="width: 75ch">
+        <col style="width: 20ch">
+        <col style="width: 50ch">
+        <tbody>
+            <tr>
+                <th></th>
+                <th>Team</th>
+                <th>Incorrect guesses</th>
+                <th>Solve Time (PDT)</th>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                    <span class="medal">
+                    <img
+                        src="../../static/images/medal_1.svg"
+                        class="medal__img medal--table-row-spacing"
+                        alt="Medal"
+                    />
+                    </span>
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Space%20Caps'>
+                        Space Caps
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 2:26:46 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                    <span class="medal">
+                    <img
+                        src="../../static/images/medal_2.svg"
+                        class="medal__img medal--table-row-spacing"
+                        alt="Medal"
+                    />
+                    </span>
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=The%20Long%20Squat'>
+                        The Long Squat
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 2:39:35 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                    <span class="medal">
+                    <img
+                        src="../../static/images/medal_3.svg"
+                        class="medal__img medal--table-row-spacing"
+                        alt="Medal"
+                    />
+                    </span>
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=joseph%27s%20colorless%20green%20dreamcoat'>
+                        joseph&#39;s colorless green dreamcoat
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 18, 2:45:46 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=The%20Spiciest%20Memelords'>
+                        The Spiciest Memelords
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 2:52:55 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Brown%20Herrings'>
+                        Brown Herrings
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 2:56:38 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Just-Us%20League'>
+                        Just-Us League
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 3:13:19 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=%CF%80-point%20shot'>
+                        π-point shot
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 3:28:05 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=The%20Magpie'>
+                        The Magpie
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 3:28:28 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Phlogiston'>
+                        Phlogiston
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 18, 3:28:55 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Goose%20Windfall%20Planet'>
+                        Goose Windfall Planet
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 3:30:31 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=chestnut'>
+                        chestnut
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 3:35:53 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=The%20Judean%20GNUs'>
+                        The Judean GNUs
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 3:37:15 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=SPecial%20oPS'>
+                        SPecial oPS
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 3:39:00 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Team%20Blutarsky'>
+                        Team Blutarsky
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 18, 3:45:50 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Pluru'>
+                        Pluru
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 3:52:50 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=%F0%9F%91%8C%F0%9F%98%82'>
+                        👌😂
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 4:01:16 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Frumious%20Bandersnatch'>
+                        Frumious Bandersnatch
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 4:01:23 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Synod'>
+                        Synod
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 4:07:03 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Duck%20Soup'>
+                        Duck Soup
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 4:09:31 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Hailfire%20Spotters'>
+                        Hailfire Spotters
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 4:18:04 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Ducky%20Charms'>
+                        Ducky Charms
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 4:47:08 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Lobster%20Recipe'>
+                        Lobster Recipe
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 4:51:04 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=ET%20Phone%20In%20Answer'>
+                        ET Phone In Answer
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 4:54:03 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Kuroko%20no%20Pazuru'>
+                        Kuroko no Pazuru
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 5:06:53 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Puzzlin%27%20Wugs'>
+                        Puzzlin&#39; Wugs
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 5:10:33 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=%F0%9F%90%B1'>
+                        🐱
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 5:21:43 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Not%20So%20Great%20Ideas'>
+                        Not So Great Ideas
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 18, 5:34:03 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Plugh%20and%20Roll'>
+                        Plugh and Roll
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 5:35:11 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Killer%20Chicken%20Bones'>
+                        Killer Chicken Bones
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 6:14:06 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=OP_Plz'>
+                        OP_Plz
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 6:19:44 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Test%20Solution%2C%20Please%20Ignore'>
+                        Test Solution, Please Ignore
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 6:35:24 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Simplicity%20Itself'>
+                        Simplicity Itself
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 6:44:59 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=i%20hate%20all%20of%20u'>
+                        i hate all of u
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 6:58:15 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Archbishop%20of%20Lost%20Words'>
+                        Archbishop of Lost Words
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 7:22:07 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Aviation%20Laws'>
+                        Aviation Laws
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 18, 7:26:48 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Take%20if%20from%20here'>
+                        Take if from here
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 7:42:08 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Electric%20Mayhem'>
+                        Electric Mayhem
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 7:53:10 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Life'>
+                        Life
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 18, 8:09:07 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=%5BRedacted%5D'>
+                        [Redacted]
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 9:02:43 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=A%20Dragon%2C%20a%20Duck%2C%20A%20Llama%2C%20and%20a%20Panda'>
+                        A Dragon, a Duck, A Llama, and a Panda
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 9:08:37 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Moon%20Unit%20Zappa'>
+                        Moon Unit Zappa
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 9:53:13 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Puzzle%20Pirates'>
+                        Puzzle Pirates
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 10:07:12 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Intergalactic%20Banana%20Corps'>
+                        Intergalactic Banana Corps
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 10:08:17 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Other'>
+                        Other
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 10:10:34 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Information%20Vegetable%20Animal%20and%20Mineral'>
+                        Information Vegetable Animal and Mineral
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 10:12:29 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=More%20About%20Vikings'>
+                        More About Vikings
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 10:14:28 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Boroset'>
+                        Boroset
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 10:32:44 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Willa%20Chen%2C%20Kai%20Sheng%20Tai%2C%20Sean%20Miller%2C%20Max%20Rabinovich%2C%20Shawn%20Xu%2C%20Brian%20Tubergen%2C%20David%20Bieber%2C%20and%20Miles%20Yucht'>
+                        Willa Chen, Kai Sheng Tai, Sean Miller, Max Rabinovich, Shawn Xu, Brian Tubergen, David Bieber, and Miles Yucht
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 10:42:37 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Leonard%20Bernstein%E2%80%99s%20%E2%80%9CMambo%20No.%205%20%28A%20Little%20Bit%20of%20Maria%29%E2%80%9D%20in%20C%20major%2C%20lyrics%20by%20Lou%20Bega'>
+                        Leonard Bernstein’s “Mambo No. 5 (A Little Bit of Maria)” in C major, lyrics by Lou Bega
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 10:57:12 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Bears'>
+                        Bears
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 11:07:57 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Average%20Plugh%27s'>
+                        Average Plugh&#39;s
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 18, 11:15:29 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Beans%3F%20I%20Love%20Beans%21'>
+                        Beans? I Love Beans!
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 11:20:51 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Elemental%20Guessing%20Machine'>
+                        Elemental Guessing Machine
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 18, 11:33:11 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Moonlight'>
+                        Moonlight
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 12:13:18 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Tina%20I%27m%20doing%20Puzzles'>
+                        Tina I&#39;m doing Puzzles
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 12:13:51 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Team%20Chudooder'>
+                        Team Chudooder
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 12:21:07 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=yope'>
+                        yope
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 12:46:44 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Felonious%20Ferrets'>
+                        Felonious Ferrets
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 19, 12:55:14 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Team%20Runpeng'>
+                        Team Runpeng
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 19, 1:18:21 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Chicken%20%26%20ROFLs'>
+                        Chicken &amp; ROFLs
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 2:25:35 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=mezzacotta%20Puzzlers'>
+                        mezzacotta Puzzlers
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 2:31:40 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Light%20Benders'>
+                        Light Benders
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 2:47:40 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=The%20Sklogs'>
+                        The Sklogs
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 3:31:58 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Bigfield%20Fighting%20Koobish'>
+                        Bigfield Fighting Koobish
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 6:18:51 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Untitled-1.gfrm'>
+                        Untitled-1.gfrm
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 19, 6:58:37 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Azote'>
+                        Azote
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 7:00:10 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Green%20Blazers'>
+                        Green Blazers
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 8:00:44 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Dirty%20Bayes'>
+                        Dirty Bayes
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 8:12:05 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Titanic%20Lobsters'>
+                        Titanic Lobsters
+                    </a>
+                </td>
+                <td>3</td>
+                <td>
+                    March 19, 8:53:52 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=ogopogo'>
+                        ogopogo
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 10:29:32 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Team%20Eagle%20Time'>
+                        Team Eagle Time
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 10:34:13 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=I%20Can%20Breathe%20In%20Space'>
+                        I Can Breathe In Space
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 11:40:43 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Benicio%20del%20Taco'>
+                        Benicio del Taco
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 11:48:39 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=The%20Mystery%20Machine'>
+                        The Mystery Machine
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 1:29:38 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Staggering%20Genius'>
+                        Staggering Genius
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 1:42:01 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Team%20Apathy'>
+                        Team Apathy
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 1:44:58 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Adult%20Puzzle%20Camp'>
+                        Adult Puzzle Camp
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 2:48:11 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=BELPEBAP'>
+                        BELPEBAP
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 2:57:44 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Fortune%20and%20Glory'>
+                        Fortune and Glory
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 3:39:40 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=%28insert%20team%20name%20here%29'>
+                        (insert team name here)
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 3:52:43 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Local%20Honey'>
+                        Local Honey
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 5:01:28 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Wild%20Goldfish%3A%20Tides%20of%20March'>
+                        Wild Goldfish: Tides of March
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 5:24:35 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Redfun'>
+                        Redfun
+                    </a>
+                </td>
+                <td>2</td>
+                <td>
+                    March 19, 6:18:02 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Just%20for%20the%20Halibut'>
+                        Just for the Halibut
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 6:50:00 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Yo%20Ho%20Ho%20and%20Bottle%20of%20Puzzles'>
+                        Yo Ho Ho and Bottle of Puzzles
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 6:54:27 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Tweleve%20Pack'>
+                        Tweleve Pack
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 7:57:36 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Commander%20Vimes'>
+                        Commander Vimes
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 8:25:42 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Saddest%20Turtle'>
+                        Saddest Turtle
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 8:58:05 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=The%20Bee%20Movie%20but%20every%20time%20they%20say%20the%20word%20bee%20an%20entire%20Nic%20Cage%20movie%20is%20played'>
+                        The Bee Movie but every time they say the word bee an entire Nic Cage movie is played
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 10:11:58 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=ROT%2026'>
+                        ROT 26
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 19, 10:24:53 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Dank%20Poets%20Society'>
+                        Dank Poets Society
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 11:11:27 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=The%20Monstars'>
+                        The Monstars
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 19, 11:14:41 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Creative%20Juices%20From%20Inappropriate%20Places'>
+                        Creative Juices From Inappropriate Places
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 20, 12:30:25 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Seven%20Wonders'>
+                        Seven Wonders
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 20, 12:39:51 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Flower%20Power'>
+                        Flower Power
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 1:18:20 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Battle%20of%20Witzelsucht'>
+                        Battle of Witzelsucht
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 5:10:17 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=ManMaths%3A%20Bhamlmlmlmlms'>
+                        ManMaths: Bhamlmlmlmlms
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 6:38:28 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Team%20White%20Maria'>
+                        Team White Maria
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 7:13:53 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Fancy%20Ghoti'>
+                        Fancy Ghoti
+                    </a>
+                </td>
+                <td>2</td>
+                <td>
+                    March 20, 10:43:50 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Group%20Theory'>
+                        Group Theory
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 10:50:45 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=River'>
+                        River
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 12:18:26 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=ManateeM'>
+                        ManateeM
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 12:20:05 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=FLens'>
+                        FLens
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 3:17:03 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Moose%20Eating%20Bat'>
+                        Moose Eating Bat
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 4:48:27 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Memeing%20Conglomerate'>
+                        Memeing Conglomerate
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 5:40:01 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=%5Co/'>
+                        \o/
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 5:58:45 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Donuts%202.0'>
+                        Donuts 2.0
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 6:01:36 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Harvey%27s%20Varsity%20Calzone'>
+                        Harvey&#39;s Varsity Calzone
+                    </a>
+                </td>
+                <td>3</td>
+                <td>
+                    March 20, 6:45:10 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=AC%20Durand'>
+                        AC Durand
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 6:47:56 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Pusheen%20Appreciation%20Society'>
+                        Pusheen Appreciation Society
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 9:31:19 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Inhumantaray'>
+                        Inhumantaray
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 9:36:23 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Jack%20da%20Bomb'>
+                        Jack da Bomb
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 20, 10:44:35 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=XX-Rated'>
+                        XX-Rated
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 20, 11:10:31 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=totoros'>
+                        totoros
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 21, 7:54:58 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Megachiropteran%20cinematographer'>
+                        Megachiropteran cinematographer
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 21, 10:17:03 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Golden%20Golems'>
+                        Golden Golems
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 21, 10:49:02 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=yomama'>
+                        yomama
+                    </a>
+                </td>
+                <td>1</td>
+                <td>
+                    March 21, 11:22:28 AM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Jenam'>
+                        Jenam
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 21, 7:44:57 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Twomatt%20By%20Format'>
+                        Twomatt By Format
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 21, 11:43:47 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Tree%20Monkeys'>
+                        Tree Monkeys
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 21, 11:57:19 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Puzzletome'>
+                        Puzzletome
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 22, 2:32:17 PM
+                </td>
+            </tr>
+            
+            <tr >
+                <td class="td-medal">
+                    
+                </td>
+
+                <td>
+                    </span>
+                    <a href='https://galacticpuzzlehunt.com/teams?team=Skrew-Its'>
+                        Skrew-Its
+                    </a>
+                </td>
+                <td>0</td>
+                <td>
+                    March 23, 1:43:06 AM
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>
+
+
+        </div>
+        <div class="footer">&nbsp;</div>
+        
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92192633-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+        
+    </body>
+</html>

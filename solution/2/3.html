@@ -1,0 +1,351 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"0be415eea6","agent":"","transactionName":"ZgBRN0JSV0VZBxEMW19KdRZeUE1fVwpKFUFLH18GQx1RU1QUABdHCwxdDVVB","applicationID":"51841001","errorBeacon":"bam.nr-data.net","applicationTime":33}</script>
+        <title>Galactic Puzzle Hunt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../static/images/airplaneFavicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700i|Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="../../static/Skeleton-2.0.4/css/normalize.css">
+        <link rel="stylesheet" href="../../static/Skeleton-2.0.4/css/skeleton.css">
+        <link rel="stylesheet" href="../../static/css/base.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script type="text/javascript" src="../../static/js/jquery.formset.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="top-bar-container">
+             <div class="nav-inner-container">
+                <nav class="main-nav">
+                    <a href='../../index.html'>Home</a>
+                    <a href='../../rules.html'>Rules</a>
+                    
+                        <a href='../../story.html'>Story</a>
+                    
+                    <a href='../../puzzles.html'>Puzzles</a>
+                    <a href='../../teams.html'>Teams</a>
+                    <a href='../../faq.html'>FAQ</a>
+                    
+                        <a href='../../errata.html'>Updates</a>
+                    
+                    <a href='../../wrapup.html'>Wrap-Up</a>
+                </nav>
+             </div>
+        </div>
+        <div class="center">
+            <div class="row">
+                <div class="six columns">
+                
+<a href="../../puzzle/2/3.html" class="btn">
+    <div class="left-triangle"></div>
+    <span class="btn__content">Back to the puzzle</span>
+    <div class="right-triangle"></div>
+</a>
+
+                </div>
+                <div class="login-controls-container">
+                
+                </div>
+            </div>
+            
+
+<div class="single-narrower-column-on-desktop">
+    <h1 class="page-header">
+        
+        Solution: Very Fun Logic Puzzle
+        
+    </h1>
+    <p><i>
+        Written by
+        
+Seth Mulhall
+
+    </i></p>
+    <div class="solution-body">
+        
+<style>
+  .clues ol, .clues li {
+    list-style-position: outside;
+    list-style-type: decimal;
+    text-indent: -1.5em;
+    margin: 0px;
+  }
+
+  .solution table, td, th {
+  	border: 1px solid black;
+  	padding: 6px;
+  	white-space: pre;
+  }
+
+  .solution td:first-child {
+  	padding-left: 6px;
+  }
+
+  .solution td:last-child {
+  	padding-right: 6px;
+  }
+</style>
+
+<p>This is an old-fashioned logic puzzle with one twist. The three categories of clues correspond to the three steps of the solution. A possible solve path is shown at the end of this page.</p>
+
+<h3>Houses:</h3>
+<p>Much like Einstein’s riddle, this portion locates people into houses. However, unlike most riddles of this type, these people are living on a dodecahedron with one house on each of its faces. This is hinted at by the flavortext, as well as the fact that there are 12 people/colors and some houses have 5 neighbors (“The Red house neighbors the Gray house, the Cyan house, the house Philip lives in, the Orange house, and the house Thomas lives in” and “Howard settled between the Pumpkins, Watermelon, Strawberries, Bananas, and Grapes”).</p>
+
+<p>For the purposes of our solution, envision the dodecahedron as follows:</p>
+
+<pre>        1
+2 - 3 - 4 - 5 - 6 -
+| \ | \ | \ | \ | \
+7 - 8 - 9 -10- 11-
+       12</pre>
+
+<p>with 1 and 12 connected to all faces in the adjacent rows, 6 connected to 2 and 7, and 11 connected to 7.</p>
+
+<h3>Fruit:</h3>
+
+<p>Each person has some amount of fruit between 2 and 8, inclusive. These amounts are indexed into the person’s name to obtain a letter for extraction. The table below shows all people, colors, and fruit for one possible rotation of the dodecahedron.</p>
+
+<table align="center" class="compact">
+<tr><th>Face</th><th>Person</th><th>Color</th><th>Fruit</th><th>Number</th></tr>
+<tr><td>1</td><td>Ophelia</td><td>Red</td><td>Cherries</td><td>7</td></tr>
+<tr><td>2</td><td>Danielle</td><td>Gray</td><td>Tomatoes</td><td>5</td></tr>
+<tr><td>3</td><td>Stuart</td><td>Cyan</td><td>Mangoes</td><td>3</td></tr>
+<tr><td>4</td><td>Thomas</td><td>White</td><td>Kiwis</td><td>3</td></tr>
+<tr><td>5</td><td>Elizabeth</td><td>Orange</td><td>Pumpkins</td><td>8</td></tr>
+<tr><td>6</td><td>Philip</td><td>Magenta</td><td>Bananas</td><td>6</td></tr>
+<tr><td>7</td><td>Rochelle</td><td>Brown</td><td>Watermelons</td><td>3</td></tr>
+<tr><td>8</td><td>Abby</td><td>Black</td><td>Lemons</td><td>3</td></tr>
+<tr><td>9</td><td>Charles</td><td>Green</td><td>Apples</td><td>2</td></tr>
+<tr><td>10</td><td>Freya</td><td>Yellow</td><td>Strawberries</td><td>4</td></tr>
+<tr><td>11</td><td>Howard</td><td>Purple</td><td>Nectarines</td><td>3</td></tr>
+<tr><td>12</td><td>Martin</td><td>Blue</td><td>Grapes</td><td>5</td></tr>
+</table>
+
+<h3>Roses:</h3>
+
+<p>The positioning in the row of roses is entirely separate from the dodecahedron of people. The colors, however, are reused. The row represents the answer phrase.</p>
+
+<table align="center" class="compact">
+<tr><th>Rose</th><th>Person</th><th>Index</th><th>Letter</th></tr>
+<tr><td>Magenta</td><td>Philip</td><td>6</td><td>P</td></tr>
+<tr><td>Gray</td><td>Danielle</td><td>5</td><td>E</td></tr>
+<tr><td>Red</td><td>Ophelia</td><td>7</td><td>A</td></tr>
+<tr><td>Brown</td><td>Rochelle</td><td>3</td><td>C</td></tr>
+<tr><td>Gray</td><td>Danielle</td><td>5</td><td>E</td></tr>
+<tr><td>Black</td><td>Abby</td><td>3</td><td>B</td></tr>
+<tr><td>Gray</td><td>Danielle</td><td>5</td><td>E</td></tr>
+<tr><td>Purple</td><td>Howard</td><td>3</td><td>W</td></tr>
+<tr><td>Blue</td><td>Martin</td><td>5</td><td>I</td></tr>
+<tr><td>Orange</td><td>Elizabeth</td><td>8</td><td>T</td></tr>
+<tr><td>Green</td><td>Charles</td><td>2</td><td>H</td></tr>
+<tr><td>Yellow</td><td>Freya</td><td>4</td><td>Y</td></tr>
+<tr><td>White</td><td>Thomas</td><td>3</td><td>O</td></tr>
+<tr><td>Cyan</td><td>Stuart</td><td>3</td><td>U</td></tr>
+</table>
+
+<p>So the answer is <strong>PEACE BE WITH YOU</strong>. I hope you make some new, peaceful friends soon!</p>
+
+<h3>Possible Solve Path:</h3>
+
+<p>Let’s start with the houses. Here are the clues again, for reference (whenever we use a clue, we’ll place it in parentheses like this):</p>
+
+<ol class="clues">
+<li>A Green house is next to a Cyan house.</li>
+<li>Abby shares a picket fence with Charles.</li>
+<li>Both Abby and Danielle live next to the Cyan house.</li>
+<li>Charles and Freya are good friends.</li>
+<li>Elizabeth and Freya like to shout things to each other from their second floor windows.</li>
+<li>Freya is neighbors with Howard and Thomas.</li>
+<li>Gray and Cyan houses appear next to each other.</li>
+<li>Howard lives in the Purple house.</li>
+<li>If you lived in the Magenta house, Ophelia would be your neighbor.</li>
+<li>Martin lives next to the Yellow house.</li>
+<li>Only Abby lives in the Black house.</li>
+<li>Ophelia lives in a lovely, Red Victorian house.</li>
+<li>Orange is next to White.</li>
+<li>People live next to the people they like. They do not live next to people they hate.</li>
+<li>Rochelle and Charles got in a fight years ago and haven't spoken since.</li>
+<li>Stuart loves his Cyan home.</li>
+<li>Stuart refuses to have anything to do with Howard or Howard's neighbors.</li>
+<li>The Black house is on the opposite side from Elizabeth's house.</li>
+<li>The Brown house is occupied by Rochelle.</li>
+<li>The Red house neighbors the Gray house, the Cyan house, the house Philip lives in, the Orange house, and the house Thomas lives in.</li>
+<li>The White and Blue houses are not adjacent.</li>
+<li>There is one house of each color, and exactly one person lives in each house.</li>
+<li>You can see the Magenta house from the Brown house.</li>
+</ol>
+
+<p>Without loss of generality, we place Ophelia’s Red house (12) at position 1. Also without loss of generality, we place the Gray house at position 2 (20) and the Cyan house at position 3 (7, 20). Stuart is in the Cyan house (16). Then, Howard must live in position 11 (17) and has the Purple house (8). Also, positions 4, 5, and 6 must contain Philip, Thomas, and Orange in some order (20); let’s call this deduction A.</p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red</td><td></td><td></td></tr>
+<tr><td>? / Gray</td><td>Stuart / Cyan</td><td>? / ?</td><td>? / ?</td><td>? / ?</td></tr>
+<tr><td>? / ?</td><td>? / ?</td><td>? / ?</td><td>? / ?</td><td>Howard / Purple</td></tr>
+<tr><td></td><td></td><td>? / ?</td><td></td><td></td></tr>
+</table>
+
+<p>Abby lives in the Black house (11) and is next to Stuart (3), which means Abby is in positions 4, 8, or 9. However, Abby cannot be in position 4 (A), so she must be in 8 or 9. Elizabeth lives on the opposite side from Abby (18), so she must be in positions 4 or 5, respectively, and must also live in the Orange house (A).</p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red</td><td></td><td></td></tr>
+<tr><td>? / Gray</td><td>Stuart / Cyan</td><td>? / ?</td><td>(elizabeth / orange)</td><td>(elizabeth / orange)</td></tr>
+<tr><td>? / ?</td><td>(abby / black)</td><td>(abby / black)</td><td>? / ?</td><td>Howard / Purple</td></tr>
+<tr><td></td><td></td><td>? / ?</td><td></td><td></td></tr>
+</table>
+
+<p>Now, Freya must border Elizabeth (5), Thomas (6), and Howard (6). Let’s look at the 5 positions surrounding Howard: 5, 6, 7, 10, 12. Freya can’t be in 5 or 6 (A). Freya also can’t be in 12 (can’t border Elizabeth) or 7 (can’t border both Thomas and Elizabeth), so Freya must be in position 10. Elizabeth, bordering Freya, must be in position 5, and Abby must then be in position 8.</p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red</td><td></td><td></td></tr>
+<tr><td>? / Gray</td><td>Stuart / Cyan</td><td>? / ?</td><td>Elizabeth / Orange</td><td>? / ?</td></tr>
+<tr><td>? / ?</td><td>Abby / Black</td><td>? / ?</td><td>Freya / ?</td><td>Howard / Purple</td></tr>
+<tr><td></td><td></td><td>? / ?</td><td></td><td></td></tr>
+</table>
+
+<p>Freya is neighbors with Thomas (6), so Thomas must go in position 4 and Philip must go in position 6 (A). Charles borders both Freya (4) and Abby (2), so he must be in positions 9 or 12. Rochelle lives in the Brown house (19), so the only positions left for her are 7, 9, or 12. However, Rochelle and Charles are not adjacent (15); the only way to satisfy all of these conditions is to put Rochelle in position 7 and Charles in position 9. </p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red</td><td></td><td></td></tr>
+<tr><td>? / Gray</td><td>Stuart / Cyan</td><td>Thomas / ?</td><td>Elizabeth / Orange</td><td>Philip / ?</td></tr>
+<tr><td>Rochelle / Brown</td><td>Abby / Black</td><td>Charles / ?</td><td>Freya / ?</td><td>Howard / Purple</td></tr>
+<tr><td></td><td></td><td>? / ?</td><td></td><td></td></tr>
+</table>
+
+<p>Now we’re in the home stretch. Danielle must be in position 2 (3), leaving Martin for position 12. Philip must live in the Magenta house (9, 23). White and Blue are not adjacent (21), which means that they must be in positions 4 and 12 in some order; (13) implies that White is 4 and Blue is 12. We are left with Green and Yellow, and from (1), Green must be in position 9 and Yellow must be in position 10.</p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red</td><td></td><td></td></tr>
+<tr><td>Danielle / Gray</td><td>Stuart / Cyan</td><td>Thomas / White</td><td>Elizabeth / Orange</td><td>Philip / Magenta</td></tr>
+<tr><td>Rochelle / Brown</td><td>Abby / Black</td><td>Charles / Green</td><td>Freya / Yellow</td><td>Howard / Purple</td></tr>
+<tr><td></td><td></td><td>Martin / Blue</td><td></td><td></td></tr>
+</table>
+
+<p>Now, let’s determine the fruits. Again, here are the clues for reference:</p>
+<ol class="clues">
+<li>Charles lives where the Apples grow.</li>
+<li>Cherries belong to someone who lives near Elizabeth and the White house.</li>
+<li>Howard settled between the Pumpkins, Watermelon, Strawberries, Bananas, and Grapes.</li>
+<li>If you started at Howard's house, it is possible to walk to Thomas's house in such a way that everyone you visit, including the one with the Watermelons, has the same number of fruit.</li>
+<li>If you walked a path that took you by the Gray, Magenta, Red, and Orange houses, in that order, you'd note that each person living there has one more piece of fruit than the last.</li>
+<li>Lemons grow on land by the Black house..</li>
+<li>Mangoes were last seen in the Cyan house.</li>
+<li>Only three Lemons!?</li>
+<li>Philip has six pieces of fruit.</li>
+<li>The Grapes grow opposite from our Red friend.</li>
+<li>The person in the Green house has the least fruit.</li>
+<li>The person who has the Kiwis lives next to the Cyan house, a person with four fruit, and Elizabeth.</li>
+<li>The Strawberries and Lemons are both next to the Apples and Grapes.</li>
+<li>There are 52 pieces of fruit in all.</li>
+<li>There are more Pumpkins than Bananas.</li>
+<li>Three Nectarines grew from the Purple house’s plot.</li>
+<li>Tomatoes are a fruit.</li>
+<li>You need five Grapes to solve this puzzle.</li>
+</ol>
+
+<p>We start by putting in the straightforward clues: Charles has Apples (1), Abby has 3 Lemons (6, 8), Philip has 6 fruits (9), Martin has 5 Grapes (10, 18), Howard has 3 Nectarines (16), and Stuart has Mangoes (7).</p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red<br/>? / ?</td><td></td><td></td></tr>
+<tr><td>Danielle / Gray<br/>? / ?</td><td>Stuart / Cyan<br/>? / Mangoes</td><td>Thomas / White<br/>? / ?</td><td>Elizabeth / Orange<br/>? / ?</td><td>Philip / Magenta<br/>6 / ?</td></tr>
+<tr><td>Rochelle / Brown<br/>? / ?</td><td>Abby / Black<br/>3 / Lemons</td><td>Charles / Green<br/>? / Apples</td><td>Freya / Yellow<br/>? / ?</td><td>Howard / Purple<br/>3 / Nectarines</td></tr>
+<tr><td></td><td></td><td>Martin / Blue<br/>5 / Grapes</td><td></td><td></td></tr>
+</table>
+
+<p>Danielle has 5 fruits, Ophelia has 7 fruits, and Elizabeth has 8 fruits (5). Thomas has 3 fruits (4). Freya has Strawberries (13). </p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red<br/>7 / ?</td><td></td><td></td></tr>
+<tr><td>Danielle / Gray<br/>5 / ?</td><td>Stuart / Cyan<br/>? / Mangoes</td><td>Thomas / White<br/>3 / ?</td><td>Elizabeth / Orange<br/>8 / ?</td><td>Philip / Magenta<br/>6 / ?</td></tr>
+<tr><td>Rochelle / Brown<br/>? / ?</td><td>Abby / Black<br/>3 / Lemons</td><td>Charles / Green<br/>? / Apples</td><td>Freya / Yellow<br/>? / Strawberries</td><td>Howard / Purple<br/>3 / Nectarines</td></tr>
+<tr><td></td><td></td><td>Martin / Blue<br/>5 / Grapes</td><td></td><td></td></tr>
+</table>
+
+<p>There are 3 Watermelons (4), and they are adjacent to Howard (3); out of Howard’s five neighbors, the only one that can have the Watermelons is Rochelle. Elizabeth and Philip must have Pumpkins and Bananas in some order (3), and by (15), Elizabeth must have the Pumpkins. Ophelia has the Cherries (2). Thomas has the Kiwis (12), leaving Danielle with the Tomatoes.</p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red<br/>7 / Cherries</td><td></td><td></td></tr>
+<tr><td>Danielle / Gray<br/>5 / Tomatoes</td><td>Stuart / Cyan<br/>? / Mangoes</td><td>Thomas / White<br/>3 / Kiwis</td><td>Elizabeth / Orange<br/>8 / Pumpkins</td><td>Philip / Magenta<br/>6 / Bananas</td></tr>
+<tr><td>Rochelle / Brown<br/>3 / Watermelons</td><td>Abby / Black<br/>3 / Lemons</td><td>Charles / Green<br/>? / Apples</td><td>Freya / Yellow<br/>? / Strawberries</td><td>Howard / Purple<br/>3 / Nectarines</td></tr>
+<tr><td></td><td></td><td>Martin / Blue<br/>5 / Grapes</td><td></td><td></td></tr>
+</table>
+
+<p>The total number of fruits we’ve assigned is 43, so we have 9 fruits left to assign over Stuart, Charles, and Freya (14). We don’t have the (4) path from Howard to Thomas yet, so at least one of these people must have exactly 3 fruits. Another one of these people must have exactly 4 fruits (12). Therefore, Stuart, Charles, and Freya must have 2, 3, and 4 fruits in some order. Charles must then have 2 fruits (11), and Freya must have 4 (12), leaving Stuart with 3.</p>
+
+<table align="center" class="solution">
+<tr><td></td><td></td><td>Ophelia / Red<br/>7 / Cherries</td><td></td><td></td></tr>
+<tr><td>Danielle / Gray<br/>5 / Tomatoes</td><td>Stuart / Cyan<br/>3 / Mangoes</td><td>Thomas / White<br/>3 / Kiwis</td><td>Elizabeth / Orange<br/>8 / Pumpkins</td><td>Philip / Magenta<br/>6 / Bananas</td></tr>
+<tr><td>Rochelle / Brown<br/>3 / Watermelons</td><td>Abby / Black<br/>3 / Lemons</td><td>Charles / Green<br/>2 / Apples</td><td>Freya / Yellow<br/>4 / Strawberries</td><td>Howard / Purple<br/>3 / Nectarines</td></tr>
+<tr><td></td><td></td><td>Martin / Blue<br/>5 / Grapes</td><td></td><td></td></tr>
+</table>
+
+<p>Finally, here’s a logical path for the roses:</p>
+<ol class="clues">
+<li>A Black rose is surrounded by roses that share a color.</li>
+<li>A Blue rose is no more than two away from a Gray rose.</li>
+<li>A Magenta rose and a Cyan rose are as far apart as possible.</li>
+<li>All roses in the right half of the row appear only once in the row.</li>
+<li>Every color of rose, except one, appears exactly once.</li>
+<li>Four roses lie between two Gray roses.</li>
+<li>From right to left, these roses appear in this order, but not necessarily consecutively: Cyan, Green, Orange, Black, Red.</li>
+<li>The middle roses are Gray and Purple.</li>
+<li>The rose in the middle of the left half of the row is Brown.</li>
+<li>The sequence Green, Yellow, White appears somewhere in the row of roses.</li>
+<li>There are an even number of roses.</li>
+</ol>
+
+<p>We first note that there are 12 colors represented among these clues, and Gray appears at least twice (6), so there must be at least 14 total roses (11). (9) implies that the left half of the row has odd length, so the total number of roses must be 2 modulo 4. This already strongly implies that there are 14 roses, but to prove that 18 roses is impossible, we can use the following logic: if there were 18 roses, then there needs to be 7 Gray roses, all in the left half (4). However, the Magenta rose (3, 7), Brown rose (9), and Black rose (1) must also be in the left half, for a total of 10 distinct roses in the left half, which is impossible. A similar argument shows that any number greater than 18 is also impossible.</p>
+
+<p>Now, we have 14 roses, 3 of which are Gray. Magenta is first and Cyan is last (3, 7), and Brown is in the 4th position (9). Gray is in the 7th position and Purple is in the 8th position (8, 4).</p>
+
+<table align="center" class="solution">
+<tr><td>Mag</td><td>?</td><td>?</td><td>Bro</td><td>?</td><td>?</td><td>Gra</td><td>Pur</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>Cya</td></tr>
+</table>
+
+<p>The only place that Black can go in now is the 6th position (1), which puts another Gray rose in the 5th position. The last Gray rose must go in the 2nd position (6), which means Red is in the 3rd position (7).</p>
+
+<table align="center" class="solution">
+<tr><td>Mag</td><td>Gra</td><td>Red</td><td>Bro</td><td>Gra</td><td>Bla</td><td>Gra</td><td>Pur</td><td>?</td><td>?</td><td>?</td><td>?</td><td>?</td><td>Cya</td></tr>
+</table>
+
+<p>Blue must be in the 9th position (2). The Orange rose must be to the left of the Green, Yellow, White sequence (10, 7), which determines the last four spots:</p>
+
+<table align="center" class="solution">
+<tr><td>Mag</td><td>Gra</td><td>Red</td><td>Bro</td><td>Gra</td><td>Bla</td><td>Gra</td><td>Pur</td><td>Blue</td><td>Ora</td><td>Gre</td><td>Yel</td><td>Whi</td><td>Cya</td></tr>
+</table>
+
+
+
+        
+
+        
+        <hr>
+        <p><i>Author's Notes</i></p>
+        <p>It’s a shame that the fruit names weren't actually used in this puzzle, because “Tomatoes are a fruit” is an amusing clue.</p>
+        
+    </div>
+</div>
+
+
+        </div>
+        <div class="footer">&nbsp;</div>
+        
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92192633-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+        
+    </body>
+</html>

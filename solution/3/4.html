@@ -1,0 +1,384 @@
+
+<html>
+<head><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"0be415eea6","agent":"","transactionName":"ZgBRN0JSV0VZBxEMW19KdRZeUE1fVwpKFUFLH18GQx1RU1QUABdHCwxdDVVB","applicationID":"51841001","errorBeacon":"bam.nr-data.net","applicationTime":9}</script>
+<title>
+X-ray Fish Solution
+</title>
+<style type="text/css">
+* {
+  cursor: url('../../static/puzzle_resources/xray_fish_solution/lobster.gif'), auto;
+}
+font, td, p, body {
+	font-family: "Comic Sans MS", verdana, sans-serif;
+}
+a:link, a:visited {
+	color: #aaefff;text-shadow: 2px 2px #000;
+}
+a:hover {
+	color: #01a7da;text-shadow: 2px 2px #000;
+	background-color:#aaefff;
+}
+.shadowed {
+    -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.5));
+    filter: url(4.html);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+</style>
+</head>
+<BODY background='../../static/puzzle_resources/xray_fish_solution/water.jpg' text=#ffffff>
+
+<img height=39 src="../../static/puzzle_resources/xray_fish_solution/lobster.gif" style="top:-38px; left:-32px; position:absolute">
+<center>
+<img border=0 src="http://www.familylobby.com/common/tt11461425fltt.gif" class="shadowed">
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="drop-shadow">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+        <feOffset dx="6" dy="6" result="offsetblur"/>
+        <feFlood flood-color="rgba(0,0,0,1)"/>
+        <feComposite in2="offsetblur" operator="in"/>
+        <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+</svg>
+
+<P style="margin:0px"><font size=5>P</font>uzzle by <font size=5>DD L</font>iu and <font size=5>J</font>osh <font size=5>A</font>lman
+<P>
+<marquee>
+<img src="../../static/puzzle_resources/xray_fish_solution/ray.gif" width='120px' height='60px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/ray.gif" width='120px' height='60px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/ray.gif" width='120px' height='60px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/ray.gif" width='120px' height='60px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/ray.gif" width='120px' height='60px'>
+</marquee>
+<p>
+
+<audio id="audo" controls loop>
+  <source src="../../static/puzzle_resources/xray_fish_solution/RLtotalbeatsSplit.wav" type="audio/wav">
+</audio>
+
+<table border=0 cellPadding=0 cellSpacing=0 width=600 align=center>
+<tr><td>
+<font size=6>X</font>rayfish is all about the song <b><a href="https://en.wikipedia.org/wiki/Rock_Lobster"><font size=6 color=red>R</font><font color=orange>o</font><font color=yellow>c</font><font color=green>k</font> <font size=6 color=red>L</font><font color=orange>o</font><font color=yellow>b</font><font color=green>s</font><font color=blue>t</font><font color=indigo>e</font><font color=violet>r</font> by the B-52s</a></b>, as hinted by the lyric <a href="https://youtu.be/_NxSQYVFsBs?t=13"><i>"earlobe fell in the deep"</i></a>, the sick bassline, and the many animals in the video which are mentioned in the song.
+</td><td><img src="../../static/puzzle_resources/xray_fish_solution/rocklobster.gif"></td></tr>
+</table>
+
+<table border=0 cellPadding=5 cellSpacing=0 width=600 align=center>
+<tr>
+<td><img src="../../static/puzzle_resources/xray_fish_solution/rocklobster.gif"></td>
+<td>
+<font size=6>Y</font>ou need to <i><b>use your earlobe</b></i> to identify the animals in the music, as well as the animals in the video, in order to solve the puzzle.
+</td></tr>
+</table>
+
+<table border=0 cellPadding=0 cellSpacing=0 width=600 align=center>
+<tr><td>
+<font size=6>A</font>t <a href="https://youtu.be/ofkzvM7Skxg?t=183">one point in the song</a>, the singers imitate the noises of a bunch of sea creatures. The eight sea creature noises in the puzzle's music appear in this section, and so we can identify what eight creatures are making those noises! The noises in the puzzle music alternate between left and right speaker to be more distinguishable. The eight creatures we identify appear in order below.
+</td>
+<td><img src="../../static/puzzle_resources/xray_fish_solution/rocklobster.gif"></td>
+</tr>
+</table>
+
+<table border=0 cellPadding=5 cellSpacing=0 width=600 align=center>
+<tr>
+<td><img src="../../static/puzzle_resources/xray_fish_solution/rocklobster.gif"></td>
+<td>
+<font size=6>W</font>e can then count how many times each of these creatures appears in the video. Index the <b>number</b> of that sea creature into its <b>name</b> in the song, put in the order of the puzzle music, to find the puzzle answer.
+</td></tr>
+</table>
+
+<p>
+<table border=0 cellPadding=0 cellSpacing=0 width=600 align=center>
+<tr valign="top"><td>
+Answer: <p><img src="../../static/puzzle_resources/xray_fish_solution/coral.gif" height=50px><img src="../../static/puzzle_resources/xray_fish_solution/OKCORRAL_10583.gif"><img src="../../static/puzzle_resources/xray_fish_solution/coral.gif" height=50px>
+</td></tr>
+</table>
+
+<P>
+<marquee direction='right'>
+<img src="../../static/puzzle_resources/xray_fish_solution/pir1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir3.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir3.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir3.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir3.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir3.gif">
+</marquee>
+<p>
+
+<table border='2px' bordercolor='#ffffff' cellPadding='10px' cellSpacing=0 width=600 align=center>
+<tr><th>IMAGE</th><th>NAME</th><th>COUNT</th><th>LETTER</th></tr>
+<tr><td align=center width='200px'>
+<div style='width:200px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/dogfish.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/dogefish.gif">
+</div>
+</td>
+<td align=center>
+<b>DOGFISH</b>
+</td>
+<td align=center>
+<b>2</b>
+</td>
+<td align=center>
+<b>O</b>
+</td>
+</tr>
+
+
+<tr><td align=center width='337px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/baleen.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/bright.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/bsperm.gif">
+</td>
+<td align=center>
+<b>BIKINI WHALE</b><p>A 2-piece swimsuit whale.
+</td>
+<td align=center>
+<b>3</b>
+</td>
+<td align=center>
+<b>K</b>
+</td>
+</tr>
+
+
+<tr><td align=center width='200px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/catfish.gif">
+</td>
+<td align=center>
+<b>CATFISH</b><p>Somehow always positions itself inconveniently.
+</td>
+<td align=center>
+<b>1</b>
+</td>
+<td align=center>
+<b>C</b>
+</td>
+</tr>
+
+
+
+<tr><td align=center width='200px'>
+<div style='width:200px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/searobin1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/searobin2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/searobin3.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/searobin4.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/searobin5.gif">
+</div>
+</td>
+<td align=center>
+<b>SEA ROBIN</b><p>These guys can be identified by their leg-like fins that they can use to walk, or their colorful wings which they can use to fly. The amazing ATV!
+</td>
+<td align=center>
+<b>5</b>
+</td>
+<td align=center>
+<b>O</b>
+</td>
+</tr>
+
+<tr><td align=center width='337px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/narwhal1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/narwhal2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/narwhal3.gif">
+</td>
+<td align=center>
+<b>NARWHAL</b><p>Do the other whales judge them for not wearing clothes?
+</td>
+<td align=center>
+<b>3</b>
+</td>
+<td align=center>
+<b>R</b>
+</td>
+</tr>
+
+<tr><td align=center width='px'>
+<div style='width:100px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/pir1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/pir3.gif">
+</div>
+</td>
+<td align=center>
+<b>PIRANHA</b><p>Jittery little fellows.
+</td>
+<td align=center>
+<b>3</b>
+</td>
+<td align=center>
+<b>R</b>
+</td>
+</tr>
+
+<tr><td align=center width='200px'>
+<div style='width:200px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/manta2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/manta3.gif">
+</div>
+</td>
+<td align=center>
+<b>MANTA RAY</b>
+</td>
+<td align=center>
+<b>2</b>
+</td>
+<td align=center>
+<b>A</b>
+</td>
+</tr>
+
+
+
+<tr><td align=center width='220px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/jellyfish1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/jelly2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/jellyfish3.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/jelly&#32;fish.gif">
+</td>
+<td align=center>
+<b>JELLYFISH</b>
+</td>
+<td align=center>
+<b>3</b> jellyfish and <b>1</b> fish made of jelly
+</td>
+<td align=center>
+<b>L</b>
+</td>
+</tr>
+</table>
+
+
+<p>
+<marquee>
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+</marquee>
+<p>
+
+<table border=0 cellPadding=0 cellSpacing=0 width=600 align=center>
+<tr><td>
+<font size=6>T</font>here were also some <font size=6>OTHER VISITORS</font> that just happened to swim by at that moment.
+</td></tr>
+</table>
+
+
+<table border='2px' bordercolor='#ffffff' cellPadding='10px' cellSpacing=0 width=650 align=center>
+<tr><th>IMAGE</th><th>NAME</th></tr>
+
+<tr><td align=center>
+<img src="../../static/puzzle_resources/xray_fish_solution/rocklobster.gif">
+</td>
+<td align=center>
+<b>ROCK LOBSTER</b><p>A rock lobster rocking on the bass. Another hint to the song. Rocks lobster are also known as crayfish, pronounced "xrayfish".
+</td>
+</tr>
+
+<tr><td align=center>
+<div style='width:100px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/potato1.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/potato2.gif">
+</div>
+</td>
+<td align=center>
+<b>BAKIN' POTATOES</b><p>These reference another lyric in the song, and may also remind you of <a href="http://www.neopets.com/games/game.phtml?game_id=226">EXTREME POTATO COUNTER</a>, which hints counting.
+</td>
+</tr>
+
+<tr><td align=center width='400px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/beluga.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/bowhead.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/blue.gif">
+</td>
+<td align=center>
+<b>NON-BIKINI WHALES</b><p>No, those are Skirt Beluga, Bowtie Bowhead, and Sailor Senshi Blue whale.
+</td>
+</tr>
+
+
+<tr><td align=center>
+<div style='width:200px'>
+<img src="../../static/puzzle_resources/xray_fish_solution/herring.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/herring.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/herring.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/herring.gif">
+</div>
+</td>
+<td align=center>
+<b>HERRING</b><p>Happen to be red.
+</td>
+</tr>
+
+</table>
+
+
+<p>
+<p>
+<marquee direction="right">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+<img src="../../static/puzzle_resources/xray_fish_solution/lobster.gif">
+</marquee>
+
+<p style="margin:0">
+<img src="../../static/puzzle_resources/xray_fish_solution/counter.gif" width=30% >
+<p style="margin:0">
+<font size=2>visitors</font>
+
+<script type="text/javascript" src="../../static/puzzle_resources/xray_fish_solution/1dcbubble.js"></script>
+<script type="text/javascript">
+	document.getElementById("audo").play();
+</script>
+</body></html>
