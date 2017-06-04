@@ -4,7 +4,6 @@ This site will eventually host a static version of what is currently at [galacti
 
 ## TODO
 
-* Fix team page links on /bigboard.html
 * Fix Angry Portals
 * Upload source code for Thunk!
 * Fix javascript for answer checking
