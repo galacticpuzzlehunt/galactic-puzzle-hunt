@@ -4,8 +4,6 @@ This site will eventually host a static version of what is currently at [galacti
 
 ## TODO
 
-* Fix url encoding on /teams.html
-* Fix medal images on individual team pages
 * Fix team page links on /bigboard.html
 * Fix team page links on puzzle stats pages
 * Fix Angry Portals
