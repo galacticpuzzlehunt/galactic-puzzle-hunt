@@ -6,5 +6,4 @@ This site will eventually host a static version of what is currently at [galacti
 
 * Fix Angry Portals
 * Upload source code for Thunk!
-* Fix javascript for answer checking
 * Fix last solve time stats to be accurate

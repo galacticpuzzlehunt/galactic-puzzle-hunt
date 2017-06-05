@@ -25,15 +25,15 @@
                 <nav class="main-nav">
                     <a href='../../index.html'>Home</a>
                     <a href='../../rules.html'>Rules</a>
-                    
+
                         <a href='../../story.html'>Story</a>
-                    
+
                     <a href='../../puzzles.html'>Puzzles</a>
                     <a href='../../teams.html'>Teams</a>
                     <a href='../../faq.html'>FAQ</a>
-                    
+
                         <a href='../../errata.html'>Updates</a>
-                    
+
                     <a href='../../wrapup.html'>Wrap-Up</a>
                 </nav>
              </div>
@@ -41,7 +41,7 @@
         <div class="center">
             <div class="row">
                 <div class="six columns">
-                
+
 <a href="../../puzzle/2/1.html" class="btn">
     <div class="left-triangle"></div>
     <span class="btn__content">Back to the puzzle</span>
@@ -50,41 +50,77 @@
 
                 </div>
                 <div class="login-controls-container">
-                
+
                 </div>
             </div>
-            
+
 <div class="single-narrower-column-on-desktop">
     <h2 class="page-header">Check your answer for What Do You Do?</h2>
 
-    
 
-    
+    <script id="check_answer">
+      window.onload=function() {
+        form = document.getElementsByClassName('call-in-answer-panel inline-form')[0]
+        form.onsubmit=function() {
+          right_answer = 'FLYERS'
+          answer = document.getElementById('id_answer').value
+          answer = normalize_puzzle_answer(answer)
+
+          // Remove solved panel if it exists
+          if (document.contains(document.getElementById('solved-panel'))) {
+            document.getElementById("solved-panel").remove();
+          }
+
+          // Create new solved panel
+          node = document.createElement('div')
+          node.setAttribute('id', 'solved-panel')
+          if (answer == right_answer) {
+            node.setAttribute('class', 'solved-panel')
+            node.innerHTML = "<h3>Solved!</h3>\n<p>The answer was <b>" + right_answer + "</b>.</p>"
+          } else {
+            node.setAttribute('class', 'solved-panel solved-panel--incorrect')
+            node.innerHTML = "<h3>incorrect!</h3>"
+          }
+
+          // Inject it
+          form.parentNode.insertBefore(node, form)
+
+          // Return false to prevent GET request from executing
+          return false;
+        }
+      }
+
+      function normalize_puzzle_answer(answer) {
+        return answer.toUpperCase().replace(/[^A-Z]/g, '')
+      }
+    </script>
+
+
 
     <form
         class="call-in-answer-panel inline-form"
     >
-        
+
         <div class="row">
             <div class="four columns">
                 <label for="id_answer">Enter your answer guess:</label>
             </div>
             <div class="four columns">
                 <input id="id_answer" maxlength="500" name="answer" type="text" required />
-                
+
             </div>
             <div class="four columns">
                 <input class="submit-button" type="submit" value="Submit">
             </div>
         </div>
-        
+
     </form>
 
 </div>
 
         </div>
         <div class="footer">&nbsp;</div>
-        
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -96,6 +132,6 @@
 
 </script>
 
-        
+
     </body>
 </html>
