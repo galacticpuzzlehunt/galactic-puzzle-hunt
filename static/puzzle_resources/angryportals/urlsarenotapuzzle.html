@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style type="text/css">
+    #message {
+        width: 50em;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+    html, body {
+        position: relative;
+        margin: 0;
+        line-height: 0;
+        overflow: hidden;
+        background: black;
+        height: 100%;
+        width:100%;
+    }
+
+    </style>
+</head>
+
+<body>
+  <img id="message" style="display: none;" src="assets/endingportal.png"></div>
+  <script src="scripts/jquery.min.js"></script>
+  <script type="text/javascript">
+    var audio = $('<audio>').attr('src', 'sounds/sa.wav')[0];
+    $('#message').fadeIn(3000, function() { audio.play(); });
+  </script>
+</body>
+</html>
