@@ -1,0 +1,606 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  color: #222;
+  background-color: #fcfbfa;
+}
+
+h1, h2, h3, h4 {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+p {
+    margin-bottom: 1.6rem;
+}
+
+p, li {
+    font-size: 1.66rem;
+}
+
+a {
+    color: #08e;
+    text-decoration: underline;
+}
+
+li {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-indent: -2em;
+    padding-left: 3em;
+}
+
+.hunt-section {
+    margin: 40px 0;
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+}
+
+.hunt-logo {
+    max-width: 100%;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 550px) {
+    h4 {
+        font-size: 2.4rem;
+    }
+}
+
+@media(max-width: 550px) {
+    th, td {
+        /* Make the teams table look a little less silly on mobile. */
+        padding: 10px 4px;
+    }
+    
+    html {
+        margin: 20px 10px;
+    }
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+}
+
+@media(min-width: 550px) {
+    label {
+        text-align: right;
+        position: relative;
+        top: 7px;
+    }
+
+    .align-right-desktop {
+        text-align: right;
+    }
+
+    html {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .hunt-logo {
+        margin-right: 60px;
+    }
+
+    h1 {
+        font-size: 7rem;
+    }
+}
+
+@media(max-width: 1000px) and (min-width: 550px) {
+    html {
+        margin: 20px 10px;
+    }
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+.grayed-out {
+    color: #999;
+}
+
+.solved-text {
+    color: #4a2;
+}
+
+.solved-text a {
+    color: #4a2;
+}
+
+.errorlist {
+    padding: 10px;
+    border: 3px solid #b21;
+    list-style-type: none;
+    color: #b21;
+}
+
+.errorlist li {
+    margin-bottom: 0;
+    list-style-type: none;
+    text-indent: 0;
+    padding-left: 0;
+}
+
+.dont-force-caps {
+    text-transform: none !important;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 2px 0;
+
+    color: #111;
+    background-color: #f94;
+
+    text-decoration: none;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.btn__content {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.btn--large .btn__content {
+    font-size: 2.4rem;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.btn:hover {
+    color: #111;
+    background-color: #fb7;
+}
+
+.left-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 32px 6px 0 0px;
+    border-color: white transparent transparent transparent;
+}
+
+.left-triangle--large {
+    border-width: 48px 9px 0 0px;
+}
+
+.right-triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0px 32px 6px;
+    border-color: transparent transparent white transparent;
+    float: right;
+}
+
+.right-triangle--large {
+    border-width: 0 0 49px 9px;
+}
+
+
+@media (min-width: 550px) {
+    .btn--large {
+        font-size: 2.8rem;
+    }
+}
+
+.hunt-brand-header, .page-header {
+    text-align: center;
+}
+
+@media (min-width: 1000px) {
+    .hunt-brand-header {
+        font-size: 7.0rem;
+    }
+}
+
+.massive-logo__container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+}
+
+.massive-logo__img {
+    width: 100%;
+}
+
+.homepage-panel__header {
+    text-transform: uppercase;
+    color: #08e;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.banner {
+  margin: auto;
+  margin-top: 7%;
+  width: 80%;
+}
+
+nav a {
+  text-decoration: none;
+  padding-right: 16px;
+  padding-left: 16px;
+  color: #fff;
+}
+
+nav a:hover {
+  color: #c8dcf3;
+}
+
+.top-bar-container {
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+.homepage-feedback {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+@media (max-width: 1000px) {
+}
+
+.nav-inner-container {
+    background-color: #111;
+    padding: 4px 0;
+    text-align: center;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .nav-bar-triangle {
+        display: none;
+    }
+}
+
+.login-controls-container {
+    text-align: right;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.4em;
+    min-height: 35px;
+}
+
+.login-controls-container a {
+    color: #111;
+}
+
+.cta__container {
+    display: table; /* fucking css, how does it work */
+    margin: 0 auto;
+}
+
+.center {
+  margin: auto;
+  width: 80%;
+}
+
+input[type="submit"].submit-button {
+    background-color: #08e;
+    color: white;
+    border: none;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+input[type="submit"].submit-button:hover {
+    background-color: #2af;
+}
+
+.inline-form input[type="submit"] {
+    float: right;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.inline-form input[type="text"]:only-child {
+    float: right;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.inline-form textarea:only-child {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.inline-form .row {
+    margin: 1em 0;
+}
+
+.inline-form .errorlist {
+    margin-bottom: 0;
+}
+
+.p-puzzle {
+  margin-bottom: 1.3rem;
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer {
+    min-height: 40px;
+}
+
+.team-members-formset a:last-child {
+    float: right;
+}
+
+.formset-add-link {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.puzzles-list-table {
+    width: 100%;
+}
+
+.gph-list-table td, .gph-list-table th {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.td-medal {
+    text-align: center;
+}
+
+.medal__img {
+    width: 20px;
+}
+
+.medal-medium__img {
+    width: 36px;
+}
+
+.medal--table-row-spacing {
+    position: relative;
+    top: 3px;
+}
+
+td[title],
+th[title] {
+    position: relative;
+}
+
+td[title]:not([title=""]):hover::after,
+th[title]:not([title=""]):hover::after {
+    background: #fffdea;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: calc(100% - 8px);
+    content: attr(title);
+    padding: 4px 15px;
+    z-index: 1;
+    width: 18ch;
+}
+
+@media (min-width: 550px) {
+    .gph-list-table td {
+    }
+}
+
+@media (min-width: 1000px) {
+    .maybe-multi-column {
+        column-count: 2;
+        column-gap: 2em;
+    }
+}
+
+.no-break {
+    -webkit-column-break-inside: avoid; /* Chrome, Safari */
+    page-break-inside: avoid;           /* Theoretically FF 20+ */
+    break-inside: avoid-column;         /* IE 11 */
+    display:table;                      /* Actually FF 20+ */
+}
+
+
+@media (min-width: 1000px) {
+    .single-narrower-column-on-desktop {
+        max-width: 1000px;
+        width: 66.6%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.team-info-panel, .call-in-answer-panel, .solved-panel, .puzzle-stats-panel {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    padding: 16px 24px;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+.team-info-panel {
+    margin-top: 0px;
+    padding-bottom: 8px;
+}
+
+.solved-panel {
+    border-color: #4a2;
+}
+
+.solved-panel h3, .solved-panel p {
+    color: #4a2;
+}
+
+.solved-panel p {
+    margin-bottom: 0;
+}
+
+.solved-panel--incorrect {
+    border-color: #c32;
+}
+
+.solved-panel--incorrect h3, .solved-panel--incorrect p {
+    color: #c32;
+    margin-bottom: 0
+}
+
+.solved-marker {
+    font-weight: bold;
+    font-size: 75%;
+}
+.solved-title-marker {
+    color: #4a2;
+    font-size: 75%;
+}
+
+.team-info-panel__members {
+    margin-top: 24px;
+}
+
+.puzzle-stats-panel {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.medal-counts {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.medal-count-individual {
+    display: inline-block;
+    min-width: 60px;
+    text-align: center;
+    line-height: 1;
+}
+
+@media (min-width: 550px) {
+    .team-info-panel__members {
+        margin-top: 0;
+    }
+}
+
+.stat-entry {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    color: #08e;
+}
+
+.stat-entry__value {
+    color: black;
+}
+
+.team-member-list {
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.team-info-panel h4 {
+    margin-bottom: 0;
+}
+
+.team-info-panel__button {
+    display: block;
+    margin-left: 2px;
+    margin-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    color: #111;
+    background-color: #f94;
+
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.team-info-panel__button:hover {
+    color: #111;
+    background-color: #fb7;
+}
+
+.team-info-panel__button-text {
+    text-align: center;
+}
+
+.story-chunk {
+    font-style: italic;
+}
+
+.puzzle-body {
+    margin-top: 3em;
+}
+
+.compact td, .compact th {
+	padding: .25rem .75rem;
+}
+
+.current-team {
+    font-weight: bold;
+}
+table.bigboard td, table.bigboard th {
+    padding: 0 0.3em;
+    line-height: 1.25;
+}
+table.bigboard td.solved-early {
+    background-color: #060;
+    color: #fff;
+}
+table.bigboard td.solved-late {
+    background-color: #dfd;
+    color: #000;
+}
+table.bigboard td.gold {
+    background-color: #FBDB7E;
+}
+table.bigboard td.silver {
+    background-color: #E0E0E0;
+}
+table.bigboard td.bronze {
+    background-color: #DDA169;
+}
+table.bigboard td.wrong-answers {
+    background-color: #fdd;
+    color: #000;
+}
+table.bigboard .day-start {
+    border-left: 1px solid #e1e1e1;
+}
