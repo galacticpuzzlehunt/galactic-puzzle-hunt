@@ -1,3 +1,3 @@
 # Galactic Puzzle Hunt
 
-This is a dummy repository that just redirects to the GitHub Pages site for the latest Galactic Puzzle Hunt.
+While GPH is not actively running, this repository is what's displayed on [galacticpuzzlehunt.com].
