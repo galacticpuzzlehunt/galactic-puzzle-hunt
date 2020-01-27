@@ -26,6 +26,10 @@ p, li {
     font-size: 1.66rem;
 }
 
+.larger-p-text {
+    font-size: 1.85rem;
+}
+
 a {
     color: #08e;
     text-decoration: underline;
@@ -61,7 +65,7 @@ li {
         /* Make the teams table look a little less silly on mobile. */
         padding: 10px 4px;
     }
-    
+
     html {
         margin: 20px 10px;
     }
